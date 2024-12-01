@@ -10,5 +10,15 @@ public class DataCountMain3 {
 
         Data3 data3 = new Data3("C");
         System.out.println("C count = " + Data3.count);
+
+        // 추가
+        // 1. 인스턴스를 통한 접근 -> 권장 X
+        // 정적 변수의 경우 인스턴스를 통한 접근은 추천하지 않는다.
+        // 왜냐하면 코드를 읽을 때 마치 인스턴스 변수에 접근하는 것 처럼 오해할 수 있기 때문이다.
+        Data3 data4 = new Data3("D");
+        System.out.println(data4.count);
+
+        // 2. 클래스를 통한 접근
+        System.out.println(Data3.count);
     }
 }
